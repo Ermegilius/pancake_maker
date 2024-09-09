@@ -26,4 +26,11 @@ function totalCounter() {
     }
 }
 
+function priceBannerAnimation() {
+
+}
+
+
+
 addEventListener('change', totalCounter);
+addEventListener('change', priceBannerAnimation);
