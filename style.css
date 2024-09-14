@@ -17,9 +17,14 @@ body {
   width: 100%;
 }
 
+
 .form-container {
   padding: 20px;
   font-size: 1.2rem;
+}
+
+.form-container span {
+  font-weight: bold;
 }
 
 .image-container img {
@@ -27,6 +32,10 @@ body {
   height: 100%;
   object-fit: cover;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.customization-section {
+  margin: 1rem 0;
 }
 
 select {
@@ -41,25 +50,71 @@ input[type=checkbox] {
   margin-top: 1rem;
 }
 
+input[type=radio] {
+  transform: scale(2.5);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
 .price-banner {
   position: absolute;
   top: 20px;
   left: 20%;
   transform: translateX(-50%);
   background-color: #d17b49;
+  background-position: center;
+  background-size: cover;
   color: white;
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
+  width: 10rem;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 3rem;
+  font-size: 4rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  animation-name: priceBannerAnimation;
   animation-duration: 1s;
 }
 
+.orderInfo-section {
+  margin: 1rem 0;
+}
+
+.price-display {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.price-display button{
+  padding: .5rem;
+  background-color: rgb(21, 137, 253);
+  border-radius: .5rem;
+  color: #FFFFFF;
+  border: none;
+
+  text-transform: uppercase;
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+#order {
+  font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animation section*/
+@keyframes priceBannerAnimation {
+  from {background-color: #d17b49;}
+  to {background-color: #ffffff;}
+}
+
+/* Responsive design section */
 /* Extra small devices are default (phones, 600px and down) */
 
 /*Small devices*/
@@ -72,18 +127,36 @@ input[type=checkbox] {
   .container {
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     height: 100vh
- 
   }
 
   .image-container, .form-container  {
     height: 100%;
   }
+}
+  .image-container {
+    height: 100vh;
+  }
 
   input[type=checkbox] {
-    transform: scale(2);
+    transform: scale(1.5);
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
   }
+
+  input[type=radio] {
+    transform: scale(1.5);
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    margin-top: .5rem;
+  }
+  .price-display {
+    flex-direction: row;
+  }
+  .price-display button{
+    font-size: 1 rem;
 }
 
 /* Large devices*/
@@ -96,7 +169,3 @@ input[type=checkbox] {
 
 }
 
-@keyframes priceBannerAnimation {
-  from {background-color: red;}
-  to {background-color: yellow;}
-}
