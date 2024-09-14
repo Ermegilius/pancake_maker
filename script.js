@@ -27,11 +27,12 @@ function totalCounter() {
             chosenAddsPrice += checkedValue;
         }
     }
+
     let chosenType = document.querySelector("#type");
     let chosenTypePrice = +chosenType.value;
     //console.log("Chosen adds price is " + chosenAddsPrice);
     totalPrice = chosenTypePrice + chosenAddsPrice;
-    //console.log("Total price is " + totalPrice);
+    console.log("Total price is " + totalPrice);
     for (i = 0; i < totalPriceBanner.length; i++) {
         totalPriceBanner[i].textContent = "$" + totalPrice;
     }
