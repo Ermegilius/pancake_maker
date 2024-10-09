@@ -96,10 +96,18 @@ function returnBack() {
         section.classList.remove('hidden');
     });
 
-    let inputs = document.getElementsByTagName('input');
-    Array.from(inputs).forEach((input) => {
-        input.value = "";
+    // Reset input values
+    clientName.value = ""; // Clear client name
+    document.querySelector('#totalPrice').textContent = '$5'; // reset to base price
+    document.querySelector('#orderTotalPrice').textContent = ''; // clear order total
+    document.querySelector('#orderPancakeOptions').innerHTML = ''; // clear order options
+    document.querySelector('#bannerTotalPrice').textContent = '$5'; // clear order total
+
+    const inputs = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+    inputs.forEach(input => {
+        input.checked = false; // reset all checkboxes and radio buttons
     });
+
 }
 
 addEventListener('change', totalCounter);
