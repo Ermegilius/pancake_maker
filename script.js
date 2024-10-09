@@ -107,7 +107,8 @@ function returnBack() {
     inputs.forEach(input => {
         input.checked = false; // reset all checkboxes and radio buttons
     });
-
+    const eatIn = document.querySelector("#eatIn");
+    eatIn.checked = true;
 }
 
 addEventListener('change', totalCounter);
