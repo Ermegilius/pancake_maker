@@ -114,6 +114,21 @@ input[type=radio] {
   background-color: #fc9714;
 }
 
+#returnBackBtn {
+  padding: .5rem;
+  background-color: #1488fc;
+  border-radius: .5rem;
+  color: #FFFFFF;
+  border: none;
+  text-transform: uppercase;
+  width: 40%;
+  font-size: 1.5rem;
+}
+
+#returnBackBtn:hover{
+  background-color: #fc9714;
+}
+
 #order {
   font-size: 1.5rem;
 }
